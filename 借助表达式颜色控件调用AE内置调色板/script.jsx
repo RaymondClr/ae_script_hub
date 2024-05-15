@@ -1,0 +1,14 @@
+var compItem = app.project.activeItem || app.project.items.addComp(" ", 100, 56, 1, 10, 30);
+compItem.openInViewer();
+var shapeLayer = compItem.layers.addShape();
+shapeLayer.name = " ";
+shapeLayer.shy = true;
+var checkCompShySwitch = compItem.hideShyLayers;
+compItem.hideShyLayers = true;
+var colorEffect = shapeLayer.property("ADBE Effect Parade").addProperty("ADBE Color Control");
+colorEffect.name = " ";
+var colorProp = colorEffect.property("ADBE Color Control-0001");
+colorProp.selected = true;
+app.executeCommand(2241);
+var colorValue = colorProp.value;
+checkComp ? (shapeLayer.remove(), (compItem.hideShyLayers = checkCompShySwitch)) : compItem.remove();
