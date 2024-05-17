@@ -1,4 +1,6 @@
-function showSelectedOrActiveComp() {
+//此函数由LoYoi提交，欢迎访问我的官网，loyoi.cn
+(function (){
+  function showSelectedOrActiveComp() {
   var comp = app.project.activeItem;
 
   if (!comp || !(comp instanceof CompItem)) {
@@ -39,3 +41,5 @@ function clearAllProjectSelections() {
 }
 
 showSelectedOrActiveComp();
+})()
+
