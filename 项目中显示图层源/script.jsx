@@ -1,4 +1,4 @@
-//此函数由LoYoi提交，欢迎访问我的官网，loyoi.cn
+// 此函数由LoYoi提交，欢迎访问我的官网，https://www.loyoi.cn
 (function (){
   function showSelectedOrActiveComp() {
   var comp = app.project.activeItem;
