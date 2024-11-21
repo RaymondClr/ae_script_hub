@@ -51,4 +51,4 @@ import * as _ from "soil-ts";
     function baseCreatePalette(title: string) {
         return new Window("palette", title, undefined, { resizeable: true });
     }
-})();
+}).call(this);
