@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        // The following are necessary compilation options
+        "jsx": "preserve",
+        "noLib": true,
+        "types": ["types-for-adobe/AfterEffects/23.0"]
+    }
+}

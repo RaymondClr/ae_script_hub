@@ -1,0 +1,14 @@
+{
+    "scripts": {
+        "build": "rollup -c",
+        "watch": "node scripts/watch.js"
+    },
+    "devDependencies": {
+        "soil-ts": "*",
+        "@rollup/plugin-terser": "*",
+        "@rollup/plugin-typescript": "*",
+        "rollup": "*",
+        "tslib": "*",
+        "chokidar": "*"
+    }
+}
