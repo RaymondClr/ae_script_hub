@@ -3,7 +3,7 @@ const terser = require("@rollup/plugin-terser");
 const { readdirSync, statSync, copyFileSync, rmSync } = require("fs");
 const { resolve, extname, basename, dirname, relative } = require("path");
 
-const minutes = 1;
+const minutes = 0.08;
 const inputDir = resolve(__dirname, "src");
 const distDir = resolve(__dirname, "dist");
 const now = Date.now();
@@ -113,7 +113,7 @@ const configs = recentFiles.map((file) => {
         input: inputPath,
         output: {
             file: outputPath,
-            format: "iife",
+            // format: "iife",
             intro: "(function () {",
             outro: "}).call(this);",
             sourcemap: false,
@@ -129,7 +129,7 @@ const configs = recentFiles.map((file) => {
                     comments: false,
                     keep_quoted_props: true,
                     keep_numbers: true,
-                    preamble: `// Raymond Yan (raymondclr@foxmail.com / qq: 1107677019) - ${new Date().toLocaleString()}\n// 哔哩哔哩：https://space.bilibili.com/634669（无名打字猿）\n// 爱发电：https://afdian.net/a/raymondclr\n`,
+                    preamble: `// ${new Date().toLocaleString()}\n`,
                     wrap_func_args: false,
                 },
             }),
